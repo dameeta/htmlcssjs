@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<title>My Example</title>
+
+<style>
+  p {
+    background: rgb(243, 210, 23);
+    padding: 20px;
+  }
+</style>
+
+<!-- Load jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  
+  $( "#hide" ).click(function() {
+  
+    // Fade out the element
+    $( "p" ).fadeOut();
+    
+  });
+
+  
+  $( "#show" ).click(function() {
+  
+    // Fade in the element
+    $( "p" ).fadeIn();
+    
+  });
+
+  $("#cap").click(function(){
+   
+    $("p").css('textTransform','capitalize');
+
+  });
+
+  $("#bol").click(function(){
+   
+    var elements= $("p");
+
+    for(var i = 0; i<elements.length ; i++)
+    {
+      var html =$(elements[i]).html();
+      var fworld = html.split(" ")[i];
+      var fworldbold = "<b>" + fworld + "</b>";
+      var nhtml =html.replace(fworld,fworldbold);
+      $(elements[i]).html(nhtml);
+
+    }
+
+
+
+ });
+
+ $(".fletter").html(function()
+ {
+
+    var txt = $(this).text().trim().split(" ");
+    var first = txt.shift();
+    return (text.length >0 ? "<strong>" + first +"</strong>" : first) + text.join( " ");
+
+ });
+ 
+
+});
+</script>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="cap">Capitalize</button>
+<button id ="bol">Bold</button>
+<p>here is a text. first paragraph  .....</p>
+<p class="fletter">here is a text. second paragraph  .....</p>
+<strong></strong>

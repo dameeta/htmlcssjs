@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    //element selector
+                    $("p").hide();
+                });
+                $("#btn2").click(function(){
+                    //id selector
+                    $("#pid").hide();
+                });
+
+                $("p").click(function(){
+
+                    $(this).hide();
+                });
+                
+                $("#dck").dbclick(function(){
+
+                    $(this).hide();
+                });
+
+                $("#me").mouseenter(function(){
+
+                alert("The mouse is entered ....");
+
+                });
+
+            
+            });
+        </script>
+    </head>
+    <body>
+        <p>This is single line...</p>
+        <p id="pid">These are double lines... </p> 
+        <p>Click here !!!! </p>
+        <p id="dck">double click here!!!</p>
+
+            <button id="btn1" type="sumbit">Element selector</button>
+            <button id="btn2" type="sumbit">Id selector</button>
+        
+        <br>
+        <p id="me">Here the mouse gets enter!!!</p>
+    </body>
+</html>
