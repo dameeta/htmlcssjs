@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+body{
+	background:rgb(15, 15, 2);
+	color: #801080;
+	}
+.headtag{
+font:34pt/40pt courier;
+font-variant: small-caps;
+border: thick dashed blue;
+}
+.head3tag{
+font-size: xx-large;
+color: blueviolet;
+}
+.class1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(100%,100%,100%);
+}
+
+
